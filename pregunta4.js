@@ -1,32 +1,27 @@
-let accion = "acendente";
+let accion = "decendente";
 
-let numeros = new Array(1, 4,3, 5, 8, 10);
-
+let numeros = new Array(10, 5, 8, 3, 2, 20, 11);
 
 function ordenar(listado, accion) {
   if (accion === "acendente") {
-
-{
-      
-    
-    for (let i = 0; i < listado.length - 1; i++) {
-      {
-
-        if (listado[i] > listado[i + 1]) {
-          let orden = listado[i];
-          listado[i] = listado[i + 1];
-          listado[i + 1] = orden;
-          ordenado = false;
+    for (let i = 0; i < listado.lnegth; i++) {
+      for (let j = 0; j < listado.length - i - 1; j++) {
+        if (listado[j] > listado[j + 1]) {
+          let orden = listado[j];
+          listado[j] = listado[j + 1];
+          listado[j + 1] = orden;
         }
       }
     }
-}
+    return listado;
   } else if (accion === "decendente") {
-    for (let i = 0; i < listado.length - 1; i++) {
-      if (listado[i] < listado[i + 1]) {
-        let orden = listado[i];
-        listado[i] = listado[i + 1];
-        listado[i + 1] = orden;
+    for (let i = 0; i < listado.length; i++) {
+      for (let j = 0; j < listado.length - i - 1; j++) {
+        if (listado[j] < listado[j + 1]) {
+          let orden = listado[j];
+          listado[j] = listado[j + 1];
+          listado[j + 1] = orden;
+        }
       }
     }
   }
